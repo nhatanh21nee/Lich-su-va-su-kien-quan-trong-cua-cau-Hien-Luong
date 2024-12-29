@@ -9,6 +9,8 @@
     <title>Lịch sử và sự kiện quan trọng của cầu Hiền Lương</title> 
     <style>
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
         body {
@@ -17,7 +19,8 @@
             background-attachment: fixed;
             background-size: cover;
             color: #003366; 
-            font-family: "Baloo 2";
+            font-family: "Baloo 2", sans-serif;
+            padding: 0;
             margin: 0;
         }
         th {
@@ -30,20 +33,29 @@
             flex-wrap: wrap;
             font-size: 20px;
             margin: 20px auto;
-            justify-content: center;
+            justify-content: space-between;
             text-align: center;
+            max-width: 1200px;
+            width: 100%;
         }
-        footer {
-            background-color: #ADD8E6; 
-            border-radius: 50%;
+        .Bang {
+            background-color: #FFEB99;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
             padding: 15px;
-            width: 200px;
-            height: 200px;
-            text-align: center;
-            color: #13234B; 
-            font-size: 14px;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-            margin: 20px auto;
+            flex: 1 1 45%; /* Tự động co dãn, chiếm 45% chiều rộng */
+            margin: 10px;
+        }
+        .Bang img {
+            border-radius: 20px;
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+        .Bang:hover {
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+            background-color: #FFF5B8;
         }
         .header {
             background-color: #003366;
@@ -51,39 +63,57 @@
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
             padding: 15px;
             font-size: 25px;
-            color: #white;
+            color: white;
             text-align: center;
             margin: 20px;
-            font-family: "Baloo 2";
+            font-family: "Baloo 2", sans-serif;
             width: 100%;
-        }
-        .Bang {
-            margin: 10px;
-            background-color: #FFEB99; /* Màu vàng nhạt nhẹ nhàng hơn */
-            border-radius: 20px;
-            height: 100%;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-            padding: 15px;
-        }
-        .Bang:hover {
-            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
-            background-color: #FFF5B8; /* Màu vàng sáng hơn khi hover */
-        }
-        .Bang img {
-            border-radius: 20px;
-            max-width: 100%;
-            height: auto;
         }
         .p {
             font-weight: 700;
+        }
+        footer {
+            background-color: #ADD8E6;
+            border-radius: 50%;
+            padding: 15px;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            color: #13234B;
+            font-size: 14px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+        }
+        footer a {
+            color: #13234B;
+            text-decoration: none;
+        }
+        @media only screen and (max-width: 768px) {
+            .header {
+                font-size: 20px;
+            }
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .Bang {
+                flex: 1 1 90%;
+            }
+            footer {
+                width: 150px;
+                height: 150px;
+            }
         }
         @media only screen and (max-width: 550px) {
             .container {
                 font-size: 16px;
             }
             .header {
-                font-size: 20px;
+                font-size: 18px;
+            }
+            footer {
+                width: 120px;
+                height: 120px;
             }
         }
     </style>
@@ -110,7 +140,7 @@
     </div>
 
     <footer>
-        <p><a href="trangchu.html" style="color: #13234B; text-decoration: none;">Quay trở về trang chủ</a><br> 
+        <p><a href="trangchu.html">Quay trở về trang chủ</a><br> 
         Thực hiện bởi Nguyễn Đức Nhật Anh, Nguyễn Thị Quỳnh Như và Hoàng Thảo Nguyên<br>26/12/2024</p>
     </footer>
 </body>
